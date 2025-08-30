@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration</title>
+</head>
+<body>
+    <h1>Student Registration Portal</h1>
+    <p>Review the available courses in the table below, then complete the 
+        registration form.
+    </p>
+
+    <h2>Available Courses</h2>
+    <table border="1" width="100%">
+        <caption>
+            Information Systems Department Courses - A.Y. 2025
+        </caption>
+        <tr>
+            <th rowspan="2">Course Code</th>
+            <th rowspan="2">Course Name</th>
+            <th colspan="2">Schedule</th>
+        </tr>
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+        </tr>
+        <tr>
+            <td>CS101</td>
+            <td>Introduction to Programming</td>
+            <td>Mon & Wed</td>
+            <td>9:00-10:00 AM</td>
+        </tr>
+        <tr>
+            <td>CS102</td>
+            <td>Web Development Basics</td>
+            <td>Tue & Thu</td>
+            <td>1:00-2:00 PM</td>
+        </tr>
+        <tr>
+            <td>CS103</td>
+            <td>Database Systems</td>
+            <td rowspan="2">Fri</td>
+            <td>10:00-2:00 PM</td>
+        </tr>
+        <tr>
+            <td>CS104</td>
+            <td>Computer Networks</td>
+            <td>9:00-10:00 AM</td>
+        </tr>
+    </table>
+
+    <form action="submitted.html" method="post">
+        <fieldset>
+            <legend>
+                <h2>Registration Form</h2>
+            </legend>
+            <label for="name">Full Name:</label> <br />
+            <input 
+                id="name"
+                name="name" 
+                type="text"
+                placeholder="Lname, Fname, M.I"
+                required
+            />
+            <br/>
+            <br/>
+
+            <label for="email">Email Address:</label> <br />
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="email@example.com"
+                required>
+            <br/>
+            <br/>
+
+            <p>Year Level:</p>
+            <input type="radio" name="year" id="first" value="1st year" required>
+            <label for="first">1st Year</label><br />
+            <input type="radio" name="year" id="second" value="2nd year">
+            <label for="second">2nd Year</label><br/>
+            <input type="radio" name="name" id="third" value="3rd year">
+            <label for="third">3rd Year</label><br/>
+            <input type="radio" name="name" id="fourth" value="4th year">
+            <label for="fourth">4th Year</label><br/>
+
+            <p>Preferred Study Mode: (Optional)</p>
+            <input type="checkbox" id="online" name="mode" value="Online"/>
+            <label for="online">Online</label><br/>
+            <input type="checkbox" id="onsite" name="mode" value="Onsite"/>
+            <label for="onsite">Onsite</label><br/>
+            
+            <!-- Dropdown -->
+            <label for="course">Select Course:</label>
+            <select name="course" id="course">
+                <option value="">--Choose a Course--</option>
+                <option value="CS101">CS101 -- Introduction to Programming</option>
+                <option value="CS102">CS102 -- Web Development Basics</option>
+                <option value="CS103">CS103 -- Database Systems</option>
+                <option value="CS104">CS104 -- Computer Networks</option>
+            </select>
+            <br/>
+            <br/>
+
+            <!-- Textarea -->
+             <label for="comments">Additional Note:</label>
+             <br />
+             <textarea 
+                name="comments" 
+                id="comments" 
+                rows="4" 
+                cols="40" 
+                placeholder="Enter any additional requests or notes..."></textarea>
+            <br />
+            <br />
+
+            <button type="submit">Register</button>
+            <button type="reset">Clear Form</button>
+        </fieldset>
+    </form>
+</body>
+</html>
